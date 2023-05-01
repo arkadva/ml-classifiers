@@ -1,4 +1,4 @@
-This repository includes a basic implementations of k-Nearest Neighbors (KNN) and Gaussian Naive Bayes in Python.
+This repository includes basic implementations of k-Nearest Neighbors (KNN) and Gaussian Naive Bayes in Python.
 
 The KNN implementation provided can handle both weighted and normal (unweighted) versions, where the current weighted version is distance based.
 
