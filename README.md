@@ -4,10 +4,11 @@ The KNN implementation provided can handle both weighted and normal (unweighted)
 
 ## Requirements
 - Python 3
+
 The implementation does not require any external libraries.
 
 ## Usage
-You can find an example of how to use the models in the main.py file. You can modify the following parameters to fit your use case:
+You can find an example of how to use the models in the `main.py` file. You can modify the following parameters to fit your use case:
 `runs`, `split_ratio`, `file_name`. 
 
 You will also need to the change the implementation of the `transform(line)` function based on your data file. This function is used to convert each row of the data file into a 
