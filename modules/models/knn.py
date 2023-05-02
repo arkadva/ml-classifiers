@@ -1,5 +1,5 @@
 from math import exp, pi, sqrt
-noise = 10**(-5)
+noise = 10**(-5) + 0.5
 
 class KNNClassifier:
     def __init__(self, space):
@@ -15,12 +15,9 @@ class KNNClassifier:
         votes = {}
         for point in k_nearest_points:
             distance = KNNClassifier.calc_distance(p1, point)
-            points = (1 if not weighted else max(1, 1/(distance + noise)))
+            points = (1 if not weighted else 1/(distance + noise))
+            votes[point.classifier] = votes.get(point.classifier, 0) + points
             
-            if point.classifier in votes:
-                votes[point.classifier] += points
-            else:
-                votes[point.classifier] = points
         return max(votes, key=votes.get)
         
     @staticmethod
